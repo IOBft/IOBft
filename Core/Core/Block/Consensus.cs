@@ -322,7 +322,7 @@ namespace ETModel
                     return true;
                 if (accountIn.notice + 1 != transfer.notice)
                     return true;
-                accountIn.amount = BigInt.Add(accountIn.amount,transfer.amount);
+                accountIn.amount = BigInt.Sub(accountIn.amount,transfer.amount);
                 accountIn.index  += 1;
                 accountIn.notice += 1;
                 dbSnapshot.Accounts.Add(accountIn.address, accountIn);
