@@ -14,6 +14,11 @@ namespace ETModel
 
         public static string Sub(string a, string b)
         {
+            return (BigInteger.Parse(a.Replace(",", "")) - BigInteger.Parse(b.Replace(",", ""))).ToString();
+        }
+
+        public static string Mul(string a, string b)
+        {
             return (BigInteger.Parse(a.Replace(",", "")) * BigInteger.Parse(b.Replace(",", ""))).ToString();
         }
 
